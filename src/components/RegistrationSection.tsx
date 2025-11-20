@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Script from 'next/script';
 
 export const RegistrationSection = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -60,37 +59,19 @@ export const RegistrationSection = () => {
                         />
                     </div>
 
-                    {/* Registration Options */}
+                    {/* Registration Link */}
                     <div className={`text-center ${isVisible ? 'animate-fade-in-up delay-400' : 'opacity-0'}`}>
-                        <p className="text-teal-100/70 mb-6">Choose your registration method:</p>
-
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                            {/* Luma Checkout Button */}
-                            <a
-                                href="https://luma.com/event/evt-JPXQ14f2GRuukG7"
-                                className="luma-checkout--button px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-500/40 inline-flex items-center gap-2"
-                                data-luma-action="checkout"
-                                data-luma-event-id="evt-JPXQ14f2GRuukG7"
-                            >
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                Quick Register
-                            </a>
-
-                            {/* Direct Link Button */}
-                            <a
-                                href="https://luma.com/event/evt-JPXQ14f2GRuukG7"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="px-8 py-4 bg-teal-500/10 border border-teal-300/30 hover:bg-teal-500/20 hover:border-teal-300/50 text-teal-100 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm inline-flex items-center gap-2"
-                            >
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                </svg>
-                                View Event Page
-                            </a>
-                        </div>
+                        <a
+                            href="https://luma.com/event/evt-JPXQ14f2GRuukG7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-8 py-4 bg-teal-500/10 border border-teal-300/30 hover:bg-teal-500/20 hover:border-teal-300/50 text-teal-100 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                        >
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                            </svg>
+                            View Event Page
+                        </a>
                     </div>
 
                     {/* Event Highlights */}
@@ -113,13 +94,6 @@ export const RegistrationSection = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Load Luma Checkout Script */}
-            <Script
-                id="luma-checkout"
-                src="https://embed.lu.ma/checkout-button.js"
-                strategy="lazyOnload"
-            />
         </section>
     );
 };

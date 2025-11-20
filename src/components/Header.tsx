@@ -1,8 +1,14 @@
+'use client';
+
 import Link from 'next/link';
 
 import { Button } from './ui/Button';
 
 export const Header = () => {
+    const scrollToRegister = () => {
+        document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <header className="fixed top-0 left-0 right-0 z-50 border-b border-teal-300/20 bg-black/70 backdrop-blur-md animate-fade-in-down">
             <div className="container mx-auto px-6 h-20 flex items-center justify-between">
@@ -37,7 +43,7 @@ export const Header = () => {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <Button variant="primary" size="sm">
+                    <Button variant="primary" size="sm" onClick={scrollToRegister}>
                         Register Now
                     </Button>
                 </div>
