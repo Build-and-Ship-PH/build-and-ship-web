@@ -1,15 +1,14 @@
 export interface Sponsor {
   name: string;
-  logo?: string;
+  logo: string;
   description?: string;
-  website?: string;
 }
 
 export interface Organizer {
   name: string;
   logo?: string;
-  initials: string;
-  color: string;
+  initials?: string;
+  type: 'primary' | 'secondary'; // primary = with container, secondary = just image
 }
 
 // Organizers Configuration
@@ -17,26 +16,22 @@ export const organizers: Organizer[] = [
   {
     name: 'Inspire',
     logo: '/assets/inspire-logo.svg',
-    initials: 'IN',
-    color: 'bg-violet-500',
+    type: 'primary',
   },
   {
     name: 'GoRocky',
     logo: '/assets/gorocky-logo.png',
-    initials: 'GR',
-    color: 'bg-blue-500',
+    type: 'primary',
   },
   {
     name: 'SageDesk',
     logo: '/assets/sagedesk.jpeg',
-    initials: 'SD',
-    color: 'bg-emerald-500',
+    type: 'secondary',
   },
   {
-    name: 'Founders Launchpad',
-    logo: '/assets/founders-launchpad-logo.png',
-    initials: 'FL',
-    color: 'bg-orange-500',
+    name: 'Ticket Nation',
+    logo: '/assets/ticketnation-logo.png',
+    type: 'secondary',
   },
 ];
 
@@ -56,5 +51,10 @@ export const sponsors: Sponsor[] = [
     name: 'NUMMEALS',
     logo: '/assets/nummeals-logo.png',
     description: 'Food Partner',
+  },
+  {
+    name: 'Founders Launchpad',
+    logo: '/assets/founders-launchpad-logo.png',
+    description: 'Partner',
   },
 ];
