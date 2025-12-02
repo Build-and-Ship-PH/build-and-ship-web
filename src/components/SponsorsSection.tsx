@@ -25,86 +25,79 @@ export const SponsorsSection = () => {
         return () => observer.disconnect();
     }, []);
 
-    const tealGradients = [
-        "from-teal-400 to-cyan-500",
-        "from-cyan-400 to-sky-500",
-        "from-teal-500 to-teal-600",
-        "from-cyan-500 to-blue-500",
-    ];
-
     return (
-        <section id="sponsors" ref={sectionRef} className="py-32 relative overflow-hidden bg-black border-t border-teal-300/10">
+        <section id="sponsors" ref={sectionRef} className="py-32 relative overflow-hidden bg-zinc-950 border-t border-zinc-800">
             <div className="container mx-auto px-6 text-center">
 
-                {/* Organizers */}
-                <div className={`mb-20 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-300/30 mb-6 animate-pulse-glow">
-                        <span className="text-xs font-medium text-teal-300 uppercase tracking-wider">Organized By</span>
+                {/* Organizers - Circular avatars */}
+                <div className={`mb-24 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 mb-8">
+                        <span className="text-xs font-semibold text-teal-400 uppercase tracking-wider">Organized By</span>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-8 mt-8">
+                    <div className="flex flex-wrap justify-center gap-8 mt-6">
                         {organizers.map((org, index) => (
                             <div
                                 key={org.name}
-                                className={`group relative ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
-                                style={{ animationDelay: `${0.2 + index * 0.1}s` }}
+                                className={`group flex flex-col items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                                style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                             >
-                                <div className={`absolute inset-0 bg-gradient-to-r ${tealGradients[index % tealGradients.length]} blur-xl opacity-20 group-hover:opacity-40 transition-opacity rounded-xl`} />
-                                <div className="relative px-8 py-6 bg-teal-500/5 border border-teal-300/20 rounded-xl backdrop-blur-sm flex flex-col items-center justify-center min-w-[180px] min-h-[120px] hover:bg-teal-500/10 hover:border-teal-300/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-500/20">
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-teal-500 transition-all duration-300 bg-zinc-800 flex items-center justify-center">
                                     {org.logo ? (
-                                        <div className="mb-2">
-                                            <Image
-                                                src={org.logo}
-                                                alt={org.name}
-                                                width={80}
-                                                height={80}
-                                                className="object-contain transition-transform duration-300 group-hover:scale-110"
-                                            />
-                                        </div>
+                                        <Image
+                                            src={org.logo}
+                                            alt={org.name}
+                                            width={80}
+                                            height={80}
+                                            className="w-full h-full object-cover"
+                                        />
                                     ) : (
-                                        <span className="font-bold text-xl text-white group-hover:text-teal-300 transition-colors duration-300">{org.name}</span>
-                                    )}
-                                    {org.description && (
-                                        <span className="text-xs text-teal-200/60 mt-2">{org.description}</span>
+                                        <span className={`text-xl font-bold text-white ${org.color} w-full h-full flex items-center justify-center`}>
+                                            {org.initials}
+                                        </span>
                                     )}
                                 </div>
+                                <span className="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+                                    {org.name}
+                                </span>
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Sponsors */}
+                {/* Sponsors - Clean cards */}
                 <div className={`${isVisible ? 'animate-fade-in-up delay-400' : 'opacity-0'}`}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-300/30 mb-6 animate-pulse-glow">
-                        <span className="text-xs font-medium text-teal-300 uppercase tracking-wider">Sponsored By</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 mb-8">
+                        <span className="text-xs font-semibold text-teal-400 uppercase tracking-wider">Sponsored By</span>
                     </div>
-                    <div className="flex flex-wrap justify-center gap-8 mt-8">
+                    <div className="flex flex-wrap justify-center gap-6 mt-6 max-w-4xl mx-auto">
                         {sponsors.map((sponsor, index) => (
                             <div
                                 key={sponsor.name}
-                                className={`group px-8 py-6 bg-teal-500/5 border border-teal-300/20 rounded-xl backdrop-blur-sm flex flex-col items-center justify-center min-w-[180px] min-h-[120px] hover:bg-teal-500/10 hover:border-teal-300/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/20 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
-                                style={{ animationDelay: `${0.6 + index * 0.1}s` }}
+                                className={`group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-6 min-w-[200px] hover:border-teal-500/50 transition-all duration-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                                style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                             >
-                                {sponsor.logo ? (
-                                    <div className="mb-2">
-                                        <Image
-                                            src={sponsor.logo}
-                                            alt={sponsor.name}
-                                            width={80}
-                                            height={80}
-                                            className="object-contain transition-transform duration-300 group-hover:scale-110"
-                                        />
-                                    </div>
-                                ) : (
-                                    <span className="font-medium text-lg text-gray-300 group-hover:text-teal-200 transition-colors duration-300">{sponsor.name}</span>
-                                )}
-                                {sponsor.description && (
-                                    <span className="text-xs text-teal-200/60 mt-2">{sponsor.description}</span>
-                                )}
+                                <div className="flex flex-col items-center">
+                                    {sponsor.logo ? (
+                                        <div className="h-16 flex items-center justify-center mb-4">
+                                            <Image
+                                                src={sponsor.logo}
+                                                alt={sponsor.name}
+                                                width={120}
+                                                height={60}
+                                                className="object-contain max-h-16 opacity-80 group-hover:opacity-100 transition-opacity"
+                                            />
+                                        </div>
+                                    ) : (
+                                        <span className="font-semibold text-lg text-white mb-2">{sponsor.name}</span>
+                                    )}
+                                    {sponsor.description && (
+                                        <span className="text-xs text-teal-400 font-medium uppercase tracking-wide">
+                                            {sponsor.description}
+                                        </span>
+                                    )}
+                                </div>
                             </div>
                         ))}
-                        <div className={`px-8 py-6 border border-dashed border-teal-300/30 rounded-xl flex items-center justify-center min-w-[180px] min-h-[120px] ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: `${0.6 + sponsors.length * 0.1}s` }}>
-                            <span className="text-sm text-teal-200/60">More soon...</span>
-                        </div>
                     </div>
                 </div>
 

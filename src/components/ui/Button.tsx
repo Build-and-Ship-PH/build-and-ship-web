@@ -13,13 +13,13 @@ export const Button = ({
     children,
     ...props
 }: ButtonProps) => {
-    const baseStyles = "inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105";
+    const baseStyles = "inline-flex items-center justify-center rounded-full font-semibold transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105";
 
     const variants = {
-        primary: "bg-gradient-to-r from-teal-500 to-cyan-500 text-white hover:from-teal-600 hover:to-cyan-600 shadow-lg shadow-teal-500/25 hover:shadow-xl hover:shadow-teal-500/40",
-        secondary: "bg-teal-500/10 border border-teal-300/30 text-teal-100 hover:bg-teal-500/20 hover:border-teal-300/50 backdrop-blur-sm",
-        outline: "border border-teal-500 text-teal-500 hover:bg-teal-500 hover:text-white",
-        ghost: "text-teal-300 hover:text-teal-100 hover:bg-teal-500/10"
+        primary: "bg-teal-500 text-black hover:bg-teal-400",
+        secondary: "bg-zinc-800 border border-zinc-700 text-white hover:border-teal-500",
+        outline: "border border-zinc-700 text-white hover:border-teal-500 hover:text-teal-400",
+        ghost: "text-gray-400 hover:text-white hover:bg-zinc-800"
     };
 
     const sizes = {

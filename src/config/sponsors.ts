@@ -1,38 +1,42 @@
 export interface Sponsor {
   name: string;
-  logo?: string; // Path to logo image, optional
-  description?: string; // Optional description
-  website?: string; // Optional website link
+  logo?: string;
+  description?: string;
+  website?: string;
 }
 
 export interface Organizer {
   name: string;
-  logo?: string; // Path to logo image, optional
-  description?: string; // Optional description
-  role?: string; // Optional role/title
+  logo?: string;
+  initials: string;
+  color: string;
 }
 
 // Organizers Configuration
 export const organizers: Organizer[] = [
   {
     name: 'Inspire',
-    // logo: '/assets/sponsors/inspire-logo.png', // Uncomment when you have the logo
-    description: 'Event organizer',
+    logo: '/assets/inspire-logo.svg',
+    initials: 'IN',
+    color: 'bg-violet-500',
   },
   {
     name: 'GoRocky',
-    // logo: '/assets/sponsors/gorocky-logo.png',
-    description: 'Event organizer',
+    logo: '/assets/gorocky-logo.png',
+    initials: 'GR',
+    color: 'bg-blue-500',
   },
   {
     name: 'SageDesk',
-    // logo: '/assets/sponsors/sagedesk-logo.png',
-    description: 'Event organizer',
+    logo: '/assets/sagedesk.jpeg',
+    initials: 'SD',
+    color: 'bg-emerald-500',
   },
   {
-    name: 'Ticket Nation',
-    // logo: '/assets/sponsors/ticketnation-logo.png',
-    description: 'Event organizer',
+    name: 'Founders Launchpad',
+    logo: '/assets/founders-launchpad-logo.png',
+    initials: 'FL',
+    color: 'bg-orange-500',
   },
 ];
 
@@ -40,32 +44,17 @@ export const organizers: Organizer[] = [
 export const sponsors: Sponsor[] = [
   {
     name: 'Kaya Founders',
-    // logo: '/assets/sponsors/kaya-logo.png',
-    description: 'Venue sponsor',
+    logo: '/assets/kaya-founders-logo.png',
+    description: 'Venue Partner',
   },
   {
     name: 'PayRex',
-    // logo: '/assets/sponsors/payrex-logo.png',
-    description: 'Gold sponsor',
+    logo: '/assets/payrex-logo.png',
+    description: 'Gold Sponsor',
   },
   {
     name: 'NUMMEALS',
-    // logo: '/assets/sponsors/nummeals-logo.png',
-    description: 'Food sponsor',
+    logo: '/assets/nummeals-logo.png',
+    description: 'Food Partner',
   },
 ];
-
-/*
- * To add a logo for a sponsor/organizer:
- * 1. Place your logo image in the /public/assets/sponsors/ directory
- * 2. Uncomment the logo line and update the path
- * 3. Recommended logo dimensions: 200x200px (or similar square aspect ratio)
- * 4. Supported formats: PNG, SVG, JPG
- *
- * Example:
- * {
- *   name: 'Kaya Founders',
- *   logo: '/assets/sponsors/kaya-logo.png',
- *   description: 'Venue sponsor',
- * }
- */
