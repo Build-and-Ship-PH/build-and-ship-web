@@ -31,8 +31,8 @@ export const SponsorsSection = () => {
 
                 {/* Organizers - Circular avatars */}
                 <div className={`mb-24 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 mb-8">
-                        <span className="text-xs font-semibold text-teal-400 uppercase tracking-wider">Organized By</span>
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 mb-8">
+                        <span className="text-xs font-semibold text-orange-400 uppercase tracking-wider">Organized By</span>
                     </div>
                     <div className="flex flex-wrap justify-center gap-8 mt-6">
                         {organizers.map((org, index) => (
@@ -41,7 +41,7 @@ export const SponsorsSection = () => {
                                 className={`group flex flex-col items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
                                 style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                             >
-                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-teal-500 transition-all duration-300 bg-zinc-800 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-orange-500 transition-all duration-300 bg-zinc-800 flex items-center justify-center">
                                     {org.logo ? (
                                         <Image
                                             src={org.logo}
