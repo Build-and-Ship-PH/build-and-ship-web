@@ -6,6 +6,7 @@ import Hero from "@/components/ui/animated-shader-hero";
 import { WorkflowSection } from '@/components/WorkflowSection';
 import { AboutSection } from '@/components/AboutSection';
 import { DetailsSection } from '@/components/DetailsSection';
+import { BountiesSection } from '@/components/BountiesSection';
 import { SponsorsSection } from '@/components/SponsorsSection';
 import { RegistrationSection } from '@/components/RegistrationSection';
 
@@ -30,6 +31,7 @@ export default function Home() {
       <WorkflowSection />
       <AboutSection />
       <DetailsSection />
+      <BountiesSection />
       <SponsorsSection />
       <div id="register">
         <RegistrationSection />

@@ -29,10 +29,12 @@ export const SponsorsSection = () => {
         <section id="sponsors" ref={sectionRef} className="py-32 relative overflow-hidden bg-zinc-950 border-t border-zinc-800">
             <div className="container mx-auto px-6 text-center">
 
-                {/* Organizers - Circular avatars */}
+                {/* Organizers */}
                 <div className={`mb-24 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 mb-8">
-                        <span className="text-xs font-semibold text-orange-400 uppercase tracking-wider">Organized By</span>
+                    <div className="font-mono text-sm text-zinc-500 mb-6">
+                        <span className="text-zinc-600">{'/* '}</span>
+                        <span className="text-teal-400">Organized by</span>
+                        <span className="text-zinc-600">{' */'}</span>
                     </div>
                     <div className="flex flex-wrap justify-center gap-8 mt-6">
                         {organizers.map((org, index) => (
@@ -41,7 +43,7 @@ export const SponsorsSection = () => {
                                 className={`group flex flex-col items-center ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
                                 style={{ animationDelay: `${0.1 + index * 0.1}s` }}
                             >
-                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-orange-500 transition-all duration-300 bg-zinc-800 flex items-center justify-center">
+                                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-zinc-700 group-hover:border-teal-500 transition-all duration-300 bg-zinc-800 flex items-center justify-center">
                                     {org.logo ? (
                                         <Image
                                             src={org.logo}
@@ -56,7 +58,7 @@ export const SponsorsSection = () => {
                                         </span>
                                     )}
                                 </div>
-                                <span className="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors">
+                                <span className="mt-3 text-sm font-medium text-gray-400 group-hover:text-white transition-colors font-mono">
                                     {org.name}
                                 </span>
                             </div>
@@ -64,16 +66,18 @@ export const SponsorsSection = () => {
                     </div>
                 </div>
 
-                {/* Sponsors - Clean cards */}
+                {/* Sponsors */}
                 <div className={`${isVisible ? 'animate-fade-in-up delay-400' : 'opacity-0'}`}>
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 mb-8">
-                        <span className="text-xs font-semibold text-teal-400 uppercase tracking-wider">Sponsored By</span>
+                    <div className="font-mono text-sm text-zinc-500 mb-6">
+                        <span className="text-zinc-600">{'/* '}</span>
+                        <span className="text-teal-400">Sponsored by</span>
+                        <span className="text-zinc-600">{' */'}</span>
                     </div>
                     <div className="flex flex-wrap justify-center gap-6 mt-6 max-w-4xl mx-auto">
                         {sponsors.map((sponsor, index) => (
                             <div
                                 key={sponsor.name}
-                                className={`group relative bg-zinc-900 border border-zinc-800 rounded-2xl p-6 min-w-[200px] hover:border-teal-500/50 transition-all duration-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+                                className={`group relative bg-zinc-900/80 border border-zinc-800 rounded-lg p-6 min-w-[200px] hover:border-teal-500/50 transition-all duration-300 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
                                 style={{ animationDelay: `${0.5 + index * 0.1}s` }}
                             >
                                 <div className="flex flex-col items-center">
@@ -91,7 +95,7 @@ export const SponsorsSection = () => {
                                         <span className="font-semibold text-lg text-white mb-2">{sponsor.name}</span>
                                     )}
                                     {sponsor.description && (
-                                        <span className="text-xs text-teal-400 font-medium uppercase tracking-wide">
+                                        <span className="text-xs text-teal-400 font-mono uppercase tracking-wide">
                                             {sponsor.description}
                                         </span>
                                     )}

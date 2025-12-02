@@ -318,7 +318,7 @@ const Hero: React.FC<HeroProps> = ({
               {buttons.primary && (
                 <button
                   onClick={buttons.primary.onClick}
-                  className="px-8 py-4 bg-orange-500 hover:bg-orange-400 text-black rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 bg-teal-500 hover:bg-teal-400 text-black rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
                 >
                   {buttons.primary.text}
                 </button>
@@ -326,7 +326,7 @@ const Hero: React.FC<HeroProps> = ({
               {buttons.secondary && (
                 <button
                   onClick={buttons.secondary.onClick}
-                  className="px-8 py-4 bg-transparent border border-zinc-700 hover:border-orange-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 bg-transparent border border-zinc-700 hover:border-teal-500 text-white rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105"
                 >
                   {buttons.secondary.text}
                 </button>
