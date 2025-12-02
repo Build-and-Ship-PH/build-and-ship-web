@@ -30,21 +30,47 @@ export const WorkflowSection = () => {
             title: "Import Your Idea",
             description: "Bring your concept to the hackathon. Share your vision with mentors and teammates.",
             icon: Lightbulb,
-            code: "import { idea } from './brain'"
+            codeJsx: (
+                <>
+                    <span className="text-pink-400">import</span>
+                    <span className="text-white">{" { "}</span>
+                    <span className="text-cyan-300">idea</span>
+                    <span className="text-white">{" } "}</span>
+                    <span className="text-pink-400">from</span>
+                    <span className="text-orange-300">{" './brain'"}</span>
+                </>
+            )
         },
         {
             number: "02",
             title: "Build & Collaborate",
             description: "Work with talented developers, designers, and domain experts to build your solution.",
             icon: Users,
-            code: "const team = await collaborate()"
+            codeJsx: (
+                <>
+                    <span className="text-pink-400">const</span>
+                    <span className="text-white">{" team "}</span>
+                    <span className="text-pink-400">=</span>
+                    <span className="text-pink-400">{" await "}</span>
+                    <span className="text-yellow-300">collaborate</span>
+                    <span className="text-white">()</span>
+                </>
+            )
         },
         {
             number: "03",
             title: "Ship Your Product",
             description: "Launch your MVP and present to judges, investors, and potential users.",
             icon: Rocket,
-            code: "await deploy(product)"
+            codeJsx: (
+                <>
+                    <span className="text-pink-400">await</span>
+                    <span className="text-yellow-300">{" deploy"}</span>
+                    <span className="text-white">(</span>
+                    <span className="text-cyan-300">product</span>
+                    <span className="text-white">)</span>
+                </>
+            )
         }
     ];
 
@@ -91,7 +117,7 @@ export const WorkflowSection = () => {
                                         {/* Line number + code */}
                                         <div className="font-mono text-sm mb-6 flex">
                                             <span className="text-zinc-600 select-none mr-4">{index + 1}</span>
-                                            <code className="text-teal-400">{step.code}</code>
+                                            <code>{step.codeJsx}</code>
                                         </div>
                                         
                                         <div className="flex items-center gap-3 mb-4">
