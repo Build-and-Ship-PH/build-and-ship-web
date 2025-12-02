@@ -15,10 +15,6 @@ const HeroDemo: React.FC = () => {
   return (
     <div className="w-full">
       <Hero
-        trustBadge={{
-          text: "Trusted by forward-thinking teams.",
-          icons: ["✨"]
-        }}
         headline={{
           line1: "Launch Your",
           line2: "Workflow Into Orbit"
@@ -45,10 +41,6 @@ const HeroDemo: React.FC = () => {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <pre className="text-sm text-gray-600 overflow-x-auto">
 {`<Hero
-  trustBadge={{
-    text: "Your trust badge text",
-    icons: ["🚀", "⭐", "✨"] // optional
-  }}
   headline={{
     line1: "Your First Line",
     line2: "Your Second Line"
@@ -64,7 +56,6 @@ const HeroDemo: React.FC = () => {
       onClick: handleSecondaryClick
     }
   }}
-  className="custom-classes" // optional
 />`}
             </pre>
           </div>
