@@ -25,7 +25,7 @@ export const BountiesSection = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className="py-32 relative overflow-hidden bg-black border-t border-zinc-800">
+        <section id="bounties" ref={sectionRef} className="py-32 relative overflow-hidden bg-black border-t border-zinc-800">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
                     

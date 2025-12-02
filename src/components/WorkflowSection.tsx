@@ -49,7 +49,7 @@ export const WorkflowSection = () => {
     ];
 
     return (
-        <section ref={sectionRef} className="py-32 relative overflow-hidden bg-black">
+        <section id="workflow" ref={sectionRef} className="py-32 relative overflow-hidden bg-black">
             <div className="container mx-auto px-6">
                 <div className={`max-w-4xl mb-20 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                     {/* Code comment style header */}
