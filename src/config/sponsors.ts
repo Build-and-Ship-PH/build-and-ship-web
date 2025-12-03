@@ -24,7 +24,7 @@ export const organizers: Organizer[] = [
     type: 'primary',
   },
   {
-    name: 'SageDesk',
+    name: 'Sagedesk',
     logo: '/assets/sagedesk.jpeg',
     type: 'secondary',
   },

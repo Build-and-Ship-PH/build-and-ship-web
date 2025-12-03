@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: "Ship or Be Shipped | Build, Learn, Connect",
   description:
     "An immersive 24-hour hackathon designed for creatives, engineers, and founders. Ship meaningful ideas, discover new collaborators, and help shape the future of our builder community.",
+  icons: {
+    icon: "/assets/circle-logo.png",
+    shortcut: "/assets/circle-logo.png",
+    apple: "/assets/circle-logo.png",
+  },
 };
 
 

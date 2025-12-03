@@ -18,7 +18,7 @@ const organizersData = [
         bgClass: 'bg-white',
     },
     {
-        name: 'SageDesk',
+        name: 'Sagedesk',
         logo: '/assets/sagedesk.jpeg',
         type: 'logo-with-text',
         bgClass: 'bg-slate-700',
