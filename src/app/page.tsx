@@ -9,6 +9,9 @@ import { DetailsSection } from '@/components/DetailsSection';
 import { BountiesSection } from '@/components/BountiesSection';
 import { SponsorsSection } from '@/components/SponsorsSection';
 import { RegistrationSection } from '@/components/RegistrationSection';
+import { DiscordSection } from '@/components/DiscordSection';
+import { BountiesChannelSection } from '@/components/BountiesChannelSection';
+import { HackerRoomsSection } from '@/components/HackerRoomsSection';
 
 export default function Home() {
   return (
@@ -33,6 +36,9 @@ export default function Home() {
       <DetailsSection />
       <BountiesSection />
       <SponsorsSection />
+      <DiscordSection />
+      <HackerRoomsSection />
+      <BountiesChannelSection />
       <div id="register">
         <RegistrationSection />
       </div>
