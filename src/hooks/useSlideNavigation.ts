@@ -7,6 +7,7 @@ const SECTIONS = [
     { id: 'details', name: 'Details' },
     { id: 'bounties', name: 'Bounties' },
     { id: 'sponsors', name: 'Sponsors' },
+    { id: 'event-intro', name: 'Event Topic' },
     { id: 'discord', name: 'Discord' },
     { id: 'hacker-rooms', name: 'Hacker Rooms' },
     { id: 'bounties-channel', name: 'Bounties Channel' },

@@ -12,6 +12,7 @@ import { RegistrationSection } from '@/components/RegistrationSection';
 import { DiscordSection } from '@/components/DiscordSection';
 import { BountiesChannelSection } from '@/components/BountiesChannelSection';
 import { HackerRoomsSection } from '@/components/HackerRoomsSection';
+import { EventIntroSection } from '@/components/EventIntroSection';
 import { SlideIndicator } from '@/components/SlideIndicator';
 import { useSlideNavigation } from '@/hooks/useSlideNavigation';
 
@@ -42,6 +43,7 @@ export default function Home() {
       <DetailsSection />
       <BountiesSection />
       <SponsorsSection />
+      <EventIntroSection />
       <DiscordSection />
       <HackerRoomsSection />
       <BountiesChannelSection />
